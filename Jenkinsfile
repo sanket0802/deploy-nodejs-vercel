@@ -21,8 +21,8 @@ pipeline {
         script {
           sh 'npm install vercel' // Install Vercel CLI locally
           sh 'vercel login'
-          sh "vercel --token ${VERCEL_TOKEN} --Production" // Deploy to Vercel using the stored token
-          sh './node_modules/.bin/vercel --token $VERCEL_TOKEN --Production' // Deploy to Vercel using local installation
+          sh "vercel --token ${VERCEL_TOKEN} --prod" // Deploy to Vercel using the stored token
+          sh './node_modules/.bin/vercel --token $VERCEL_TOKEN --prod' // Deploy to Vercel using local installation
         }
       }
     }
